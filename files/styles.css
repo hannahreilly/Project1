@@ -2,6 +2,11 @@ body {
   background-color: azure;
 }
 
+header {
+  background-color: cadetblue;
+  
+}
+
 button.hover {
   color: aqua;
 }
@@ -19,6 +24,8 @@ button.hover {
   animation-timing-function: ease-out;
   
 }
+
+
 
 @keyframes text{
   0% {
@@ -38,3 +45,4 @@ button.hover {
     font-size: 70px;
 }
 }
+

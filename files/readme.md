@@ -27,7 +27,32 @@ Zomato api will be used to pull restaurants based on location along with images 
 
 {data: {…}, status: 200, statusText: "", headers: {…}, config: {…}, …}
 config: {url: "https://developers.zomato.com/api/v2.1/categories", method: "get", headers: {…}, transformRequest: Array(1), transformResponse: Array(1), …}
-data: {categories: Array(13)}
+data:
+categories: Array(13)
+0: {categories: {…}}
+1: {categories: {…}}
+2: {categories: {…}}
+3: {categories: {…}}
+4: {categories: {…}}
+5:
+categories: {id: 6, name: "Cafes"}
+__proto__: Object
+6: {categories: {…}}
+7: {categories: {…}}
+8:
+categories: {id: 9, name: "Lunch"}
+__proto__: Object
+9:
+categories: {id: 10, name: "Dinner"}
+__proto__: Object
+10:
+categories: {id: 11, name: "Pubs & Bars"}
+__proto__: Object
+11: {categories: {…}}
+12: {categories: {…}}
+length: 13
+__proto__: Array(0)
+__proto__: Object
 headers: {cache-control: "max-age=0, no-cache, no-store, no-transform", content-length: "218", content-type: "application/json"}
 request: XMLHttpRequest {readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, onreadystatechange: ƒ, …}
 status: 200
