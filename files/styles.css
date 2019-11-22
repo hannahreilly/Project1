@@ -1,0 +1,40 @@
+body {
+  background-color: azure;
+}
+
+button.hover {
+  color: aqua;
+}
+
+
+.text1 {
+  color: cadetblue;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom:20px;
+  animation-name: text;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  
+}
+
+@keyframes text{
+  0% {
+    property: first-value;
+    margin-bottom: -40px;
+    font-size: 10px;
+  }
+  
+  50% {
+    property: second-value;
+    margin-bottom: -30px;
+  }
+ 
+  100% {
+    property: third-value;
+    margin-bottom: -40px;
+    font-size: 70px;
+}
+}
