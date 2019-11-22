@@ -4,9 +4,17 @@ body {
 
 header {
   background-color: cadetblue;
+  height: 100px;
   
 }
 
+input {
+  align-content: center;
+}
+
+button {
+align-self: center;
+}
 button.hover {
   color: aqua;
 }
@@ -24,7 +32,6 @@ button.hover {
   animation-timing-function: ease-out;
   
 }
-
 
 
 @keyframes text{

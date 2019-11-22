@@ -3,7 +3,7 @@ Restaurant Finder
 ##Technologies : css, html, javascript, functions, animations & tbd
 
 ##Wireframe: 
-![I'm an inline-style link](https://docdro.id/xRnzWzT)
+![I'm an inline-style link](https://docdro.id/xRnzWzT.pdf)
 
 ##Description:
 Restaurant finder website will be used to search for restaurants in a specific city. The user will enter the website and type in the zip code of the area they want to search for. This search result will populate a list of restaurants based on that zip code. The list will allow the user to see the title, address and a photo of the restaurant. 
