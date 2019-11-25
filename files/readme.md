@@ -1,14 +1,14 @@
 Restaurant Finder
 
-##Technologies : css, html, javascript, functions, animations & tbd
+## Technologies : css, html, javascript, functions, animations & tbd
 
-##Wireframe: 
+## Wireframe: 
 ![wireframe] (https://www.docdroid.net/xRnzWzT/wireframe-pdf.pdf)
 
 ##Description:
 Restaurant finder website will be used to search for restaurants in a specific city. The user will enter the website and type in the zip code of the area they want to search for. This search result will populate a list of restaurants based on that zip code. The list will allow the user to see the title, address and a photo of the restaurant. 
 
-##Functions: 
+## Functions: 
 User must be able to utilize the search box to retrieve information based on zip code or city name
 
 The search box must populate a list of restaurants based on the zip code
@@ -19,10 +19,10 @@ The nav bar must "link" to the search page and also one additional page listing 
 
 The user must be able to click on the name of the restaurant and that should bring them to the restaurants url
 
-##Stretch Goals:
+## Stretch Goals:
 Make the links actually take the user to a new page 
 
-##API Data:
+## API Data:
 Zomato api will be used to pull restaurants based on location along with images and website links
 
 {data: {…}, status: 200, statusText: "", headers: {…}, config: {…}, …}

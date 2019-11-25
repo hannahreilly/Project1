@@ -1,36 +1,92 @@
 body {
-  background-color: azure;
+  background-image: url("../photos/fruit.jpg");
+  text-align: center;
 }
 
-header {
-  background-color: cadetblue;
-  height: 100px;
-  
+
+h1 {
+  font-family:'Poppins', sans-serif;
+  font-size: 48px;
+  margin:5px;
+}
+
+li {
+  /* float: left; */
+  list-style-type: none;
+  margin: 8px;
+  padding: 5px;
+  display: inline;
+  font-family:'Poppins', sans-serif;
+  font-size: 24px;
+  border: 2px solid black;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+	margin: 12px;
+	padding: 8px;
+	width: 200px;
+	font-size: 14px;
+	border-radius: 10px;
+  border: none;
+  text-align: center;
 }
 
 input {
-  align-content: center;
-}
-
-button {
-align-self: center;
-}
-button.hover {
-  color: aqua;
-}
-
-
-.text1 {
-  color: cadetblue;
-  font-size: 60px;
-  font-weight: 700;
-  letter-spacing: 8px;
-  margin-bottom:20px;
-  animation-name: text;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  text-align: center;
   
+}
+
+/* #getRest {
+align-content: center;
+width: 300px;
+height: 50px;
+} */
+
+
+.mySlides {
+  width: 50px;
+  height: 500px;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.slider-content {
+width: 600px;
+align-content: center;
+}
+
+.display-container {
+width: 600px;
+align-content: center;
 }
 
 

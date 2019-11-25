@@ -4,29 +4,50 @@
 <head>
   <title>Restaurant Finder</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header> Header </header>
+<header> 
+  <h1>RestaurantFindr </h1>
+</header>
+
+
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Cities</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
 
   <form>
-    <input type="text" name="city" value="" placeholder="city" id="city">
-    <button> <input type="submit" value="Find Restaurant" id="getRest"></button>
+  <input type="text" name="city" value="" placeholder="Search City/Zip" id="city">
+  <button id ="search"> Search </button>
   </form>
 
   <div id="resInfo">
-    
+    test
   </div>
 
-  <div id= "text1"> Welcome </div>
 
   <section class="city">
     <div id='results'>
 
     </div>
   </section>
+  
+  <h2 class="w3-center">Manual Slideshow</h2>
 
+  <div class="slider-content display-container">
+    <img class="mySlides" src="../photos/image.jpg" style="width:100%">
+    <img class="mySlides" src="../photos/images.jpg" style="width:100%">
+    <img class="mySlides" src="../photos/nyc-restaurants-400.jpg" style="width:100%">
+    <img class="mySlides" src="../photos/park_room_restaurant_nyc.jpg" style="width:100%">
+  
+    <button class="button" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="button" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+  
   <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
   <script src='https://unpkg.com/axios/dist/axios.min.js'></script>
 </body>
