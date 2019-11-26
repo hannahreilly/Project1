@@ -7,7 +7,7 @@ window.onload = function (event) {
 
   const input = document.querySelector('#city')
   const button = document.querySelector("button")
-  const div = document.querySelector("#resInfo")
+  const restDiv = document.querySelector(".resInfo")
   const searchInput = document.querySelector("input")
   const section = document.querySelector('.section')
 
@@ -19,22 +19,41 @@ window.onload = function (event) {
       method: 'GET'
 
     })
+    let forlooped = results.data.best_rated_restaurant
     let bestArray = results.data.best_rated_restaurant[0].restaurant.name
     let phoneNum = results.data.best_rated_restaurant[0].restaurant.phone_numbers
-
+    let resImg  = results.data.best_rated_restaurant[0].restaurant.featured_image
     // console.log(results);
-    console.log(bestArray)
+    // console.log(bestArray)
+
     function renderResults(results) {
       section.innerHTML = ""
-      for (let i = 0; i < bestArray.length; i++) {
+      for (let i = 0; i < 9; i++) {
+        let element1 = forlooped[i].restaurant.name
+        let element2 = forlooped[i].restaurant.phone_numbers
+        let image1 = forlooped[i].restaurant.featured_image
+        // let element3 = forlooped[i]
+        console.log(element1)
+        console.log(element2)
 
-        let h3Node = document.createElement('h3')
-        h3Node.innerHTML = `${bestArray}`
-        section.appendChild(h3Node)
+        let restingDiv = document.createElement("div")
+        let restName = document.createElement('h4')
+        restName.innerHTML = `${element1}`
+        restName.classList.add("results")
+
+        restingDiv.appendChild(restName)
+
   
-        let h4Node = document.createElement('h4')
-        h4Node.innerHTML = `${phoneNum}`
-        section.appendChild(h4Node)
+        let phone = document.createElement('h4')
+        phone.innerHTML = `${element2}`
+        phone.classList.add("results")
+        restingDiv.appendChild(phone)
+        restingDiv.classList.add("resting")
+        section.appendChild(restingDiv)
+
+        // let imgNode = document.createElement('section')
+        // imgNode.innerHTML = `${image1} <div><img src = ${image1[i].resImg} </div>`
+        // section.appendChild(imgNode)
       }
      
     }
