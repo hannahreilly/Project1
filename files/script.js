@@ -49,11 +49,14 @@ window.onload = function (event) {
         phone.classList.add("results")
         restingDiv.appendChild(phone)
         restingDiv.classList.add("resting")
-        section.appendChild(restingDiv)
+        
 
-        // let imgNode = document.createElement('section')
-        // imgNode.innerHTML = `${image1} <div><img src = ${image1[i].resImg} </div>`
+        let image2 = document.createElement('img')
+        image2.src = image1
+        restingDiv.appendChild(image2)
+        image2.classList.add("imageClass")
         // section.appendChild(imgNode)
+        section.appendChild(restingDiv)
       }
      
     }

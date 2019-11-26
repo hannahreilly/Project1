@@ -113,6 +113,7 @@ input {
   flex-wrap: wrap;
   flex-direction:column;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-evenly;
   align-items: inherit;
   flex-flow: row wrap;
@@ -122,9 +123,20 @@ input {
   border: (rgba(0,0,0,.3));
   padding: 5px;
   margin: 5px;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   width: 400px;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imageClass {
+  display: flex;
+  width: 400px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* #getRest {
