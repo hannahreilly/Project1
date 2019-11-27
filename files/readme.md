@@ -17,10 +17,10 @@ The restaurants must also show additional information ie. address, image, direct
 
 The nav bar must "link" to the search page and also one additional page listing the available cities
 
-The user must be able to click on the name of the restaurant and that should bring them to the restaurants url
 
 ## Stretch Goals:
 Make the links actually take the user to a new page 
+The user must be able to click on the name of the restaurant and that should bring them to the restaurants url
 
 ## API Data:
 Zomato api will be used to pull restaurants based on location along with images and website links

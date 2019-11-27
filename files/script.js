@@ -1,6 +1,8 @@
 const zomatoUrl = "https://developers.zomato.com/api";
 const api_key = '33d1c480bf5d69f93836c31489daab92';
 
+let newApi = `https://developers.zomato.com/api/v2.1/locations?query=`
+let newApi2 = `&apikey=33d1c480bf5d69f93836c31489daab92`
 window.onload = function (event) {
   const body = document.body;
 
@@ -19,20 +21,21 @@ window.onload = function (event) {
   button.addEventListener('click', async function (event) {
     event.preventDefault()
 
+
+
+    
     const newInput = input.value;
-    console.log(newInput);
+    let result22 = await axios.get(`${newApi}${newInput}${newApi2}`)
+    // console.log(result22);
+    let result33 = result22.data.location_suggestions[0].entity_id
+    // console.log(result33)
 
-    // let resultsOne = await axios.get(`https://developers.zomato.com/api/v2.1/location_details?entity_id=280&entity_type=${newInput}`, {
-    //   headers: { "user-key": "33d1c480bf5d69f93836c31489daab92" },
-    //   method: 'GET'
-    // })
+    // let result44 = await axios.get(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${result33}&entity_type=city`)
+    // console.log(result44)
 
-    // let cityId = resultsOne.data.location.city_id
-    // console.log(cityId);
-    // console.log(resultsOne)
 
-    let results = await axios.get("https://developers.zomato.com/api/v2.1/location_details?entity_id=280&entity_type=city", {
-      headers: { "user-key": "33d1c480bf5d69f93836c31489daab92" },
+    let results = await axios.get(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${result33}&entity_type=city`, {
+      headers: {"user-key": "33d1c480bf5d69f93836c31489daab92"}, 
       method: 'GET'
     })
 
@@ -90,20 +93,28 @@ window.onload = function (event) {
     }
   }
   renderResults()
-  // function title(response) {
-  //   section.innerHTML = ""
-  //   for (let i = 0; i < searchResult.length; i++) {
-  //     let searchElement = searchResult[i].data.location;
-  //     console.log(searchElement);
 
-  //     let liNode = document.createElement('section')
-  //     liNode.innerHTML = `${searchElement} <div><img src = ${searchResult[i].location} </div>`
-  //     section.appendChild(liNode)
-  //   }
-  // }
-  // title()
+//image slider//
+  
+var slideIndex = 0;
+showSlides();
 
-
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += "active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 
 }
 
