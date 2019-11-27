@@ -14,21 +14,19 @@ window.onload = function (event) {
 
   button.addEventListener('click', async function (event) {
     event.preventDefault()
-    let resultsOne = await axios.get("https://developers.zomato.com/api/v2.1/locations?query=boston", {
-      headers: { "user-key": "33d1c480bf5d69f93836c31489daab92"},
+    let resultsOne = await axios.get("https://developers.zomato.com/api/v2.1/location_details?entity_id=280&entity_type=city", {
+      headers: { "user-key": "33d1c480bf5d69f93836c31489daab92" },
       method: 'GET'
     })
 
     // let cityId = resultsOne.data.location.city_id
     // console.log(cityId);
     console.log(resultsOne)
- 
+
     let results = await axios.get("https://developers.zomato.com/api/v2.1/location_details?entity_id=280&entity_type=city", {
-      headers: {"user-key": "33d1c480bf5d69f93836c31489daab92"},
+      headers: { "user-key": "33d1c480bf5d69f93836c31489daab92" },
       method: 'GET'
     })
-
-
 
     let forlooped = results.data.best_rated_restaurant
     let bestArray = results.data.best_rated_restaurant[0].restaurant.name
