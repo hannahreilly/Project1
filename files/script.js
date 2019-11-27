@@ -17,11 +17,8 @@ window.onload = function (event) {
   const section = document.querySelector('.section')
 
 
-
   button.addEventListener('click', async function (event) {
     event.preventDefault()
-
-
 
     
     const newInput = input.value;
@@ -52,9 +49,9 @@ window.onload = function (event) {
     section.innerHTML = ""
 
     let forlooped = results.data.best_rated_restaurant
-    let bestArray = results.data.best_rated_restaurant[0].restaurant.name
-    let phoneNum = results.data.best_rated_restaurant[0].restaurant.phone_numbers
-    let resImg = results.data.best_rated_restaurant[0].restaurant.featured_image
+    // let bestArray = results.data.best_rated_restaurant[0].restaurant.name
+    // let phoneNum = results.data.best_rated_restaurant[0].restaurant.phone_numbers
+    // let resImg = results.data.best_rated_restaurant[0].restaurant.featured_image
 
     for (let i = 0; i < 9; i++) {
       let element1 = forlooped[i].restaurant.name
@@ -92,7 +89,7 @@ window.onload = function (event) {
       section.appendChild(restingDiv)
     }
   }
-  renderResults()
+  // renderResults()
 
 //image slider//
   
@@ -109,7 +106,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace("active", "");
+    dots[i].className = dots[i].className.replace("active","");
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += "active";

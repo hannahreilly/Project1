@@ -12,58 +12,60 @@
 
 <header> 
   <h1>RestaurantFindr </h1>
+
 </header>
 
 
 <ul> 
     <li><a href="index.html">Home</a></li>
-    <li><a href="#">Cities</a></li>
+    <li><a href="cities.html">Cities</a></li>
     <li><a href="#">About</a></li>
   </ul>
 
   <form class="searchSection">
-  <input type="text" placeholder="Search City/Zip" id="cities"> </input>
+  <input type="text" placeholder="Search by City" id="cities"> </input>
   <button id ="search" type="submit"> Search </button>
+
   </form>
 
-<div id="results"> <h2> Restaurants Near You </h2>
-
-<div class="fade-in"> <section class="section">
-      
-  </section></div>
-  </div>
-  
-<!-- slideshow -->
-<p>Change image every 2 seconds:</p>
+<div id="results"> <h2> Top Rated Restaurants in your Area </h2>
+  <!-- Slideshow -->
+<!-- <!-- <p>Change image every 2 seconds:</p> -->
 
 <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="rest1.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="rest1.jpg" style="width:100%">
+    <div class="text"><a href="https://uplandnyc.com/?utm_source=Google%20My%20Business&utm_medium=Website%20Button">Upland</a></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="rest2.jpg" style="width:100%">
+    <div class="text"><a href="https://www.restauranthearth.com/">Hearth</a></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="rest3.jpg" style="width:100%">
+    <div class="text"><a href="https://www.estelanyc.com/">Estela</a></div>
+  </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="rest2.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="rest3.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
+<div class="fade-in"> 
+  <section class="section fade-in">
+  </section></div>
+  </div>
+  
 
   <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
   <script src='https://unpkg.com/axios/dist/axios.min.js'></script>

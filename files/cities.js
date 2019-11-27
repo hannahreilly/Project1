@@ -1,0 +1,66 @@
+const zomatoUrl = "https://developers.zomato.com/api";
+const api_key = '33d1c480bf5d69f93836c31489daab92';
+
+window.onload = function (event) {
+
+  const input = document.querySelector('input')
+  console.log(input);
+
+
+  const button = document.querySelector("button")
+  const restDiv = document.querySelector(".resInfo")
+  const searchInput = document.querySelector("input")
+  const section = document.querySelector('.section')
+
+
+  button.addEventListener('click', async function (event) {
+    event.preventDefault()
+
+
+    let results = await axios.get(`https://developers.zomato.com/api/v2.1/cities?q=Williamsburg`, {
+      headers: { "user-key": "33d1c480bf5d69f93836c31489daab92" },
+      method: 'GET'
+    })
+
+    // console.log(results);
+    renderResults(results);
+  })
+
+  console.log(results);
+
+  let forlooped = results.data.location_suggestions
+
+  for (let i = 0; i < 9; i++) {
+    let element1 = forlooped[i].location_suggestions.name
+    let element2 = forlooped[i].restaurant.phone_numbers
+
+    // let element3 = forlooped[i]
+    console.log(element1)
+    console.log(element2)
+
+    let citiesDiv = document.createElement("div")
+    let restName = document.createElement('h3')
+    restName.innerHTML = `${element1}`
+    restName.classList.add("results")
+
+    citiesDiv.appendChild(restName)
+
+    let phone = document.createElement('h4')
+    phone.innerHTML = `${element2}`
+    phone.classList.add("results")
+    restingDiv.appendChild(phone)
+    restingDiv.classList.add("resting")
+
+    let address = document.createElement('h4')
+    address.innerHTML = `${restAddress}`
+    restingDiv.appendChild(address)
+
+    let image2 = document.createElement('img')
+    image2.src = image1
+    restingDiv.appendChild(image2)
+    image2.classList.add("imageClass")
+
+    // section.appendChild(imgNode)
+    section.appendChild(restingDiv)
+  }
+}
