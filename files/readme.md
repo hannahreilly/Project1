@@ -1,4 +1,5 @@
 Restaurant Finder
+## http://restaurantfindr.surge.sh/
 
 ## Technologies : css, html, javascript, functions, animations & tbd
 
@@ -6,12 +7,12 @@ Restaurant Finder
 ![wireframe] (https://www.docdroid.net/xRnzWzT/wireframe-pdf.pdf)
 
 ##Description:
-Restaurant finder website will be used to search for restaurants in a specific city. The user will enter the website and type in the zip code of the area they want to search for. This search result will populate a list of restaurants based on that zip code. The list will allow the user to see the title, address and a photo of the restaurant. 
+Restaurant finder website will be used to search for restaurants in a specific city. The user will enter the website and type in the name of the city they want to search for. This search result will populate a list of restaurants based on that zip code. The list will allow the user to see the title, address and a photo of the restaurant. 
 
 ## Functions: 
-User must be able to utilize the search box to retrieve information based on zip code or city name
+User must be able to utilize the search box to retrieve information based on city name
 
-The search box must populate a list of restaurants based on the zip code
+The search box must populate a list of restaurants based on the city
 
 The restaurants must also show additional information ie. address, image, directions, etc.
 
@@ -23,7 +24,7 @@ Make the links actually take the user to a new page
 The user must be able to click on the name of the restaurant and that should bring them to the restaurants url
 
 ## API Data:
-Zomato api will be used to pull restaurants based on location along with images and website links
+Zomato api will be used to pull restaurants based on location along with images and additional info
 
 {data: {…}, status: 200, statusText: "", headers: {…}, config: {…}, …}
 config: {url: "https://developers.zomato.com/api/v2.1/categories", method: "get", headers: {…}, transformRequest: Array(1), transformResponse: Array(1), …}

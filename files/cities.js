@@ -72,5 +72,3 @@ window.onload = function (event) {
   }
 }
 
-
-
