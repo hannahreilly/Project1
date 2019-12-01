@@ -1,9 +1,16 @@
 body {
   background-image: url("fruit.jpg");
   text-align: center;
-  height: 1200px;
+  height: 100%;
   background-size: cover;
   text-align: center;
+}
+
+header {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
 }
 
 
@@ -11,8 +18,10 @@ h1 {
   font-family:'Poppins', sans-serif;
   font-size: 48px;
   margin:5px;
+  display: flex;
   text-align: center;
   justify-content: center;
+  align-content: center;
 }
 
 title {
@@ -21,10 +30,9 @@ title {
 
 h2 {
   font-family:'Poppins', sans-serif;
-  background-color: rgba(255,255,255, .8);
+  /* background-color: rgba(255,255,255, .8); */
   text-align: center;
   height: 50px;
-  text-align: center;
 }
 
 h3 {
@@ -38,6 +46,7 @@ h4 {
   font-family:'Poppins', sans-serif;
   font-size: 14px;
   text-align: center;
+  align-content: center;
 }
 
 
@@ -45,6 +54,7 @@ a {
   background-color: #CCD8E8;
   text-decoration: none;
   color: black;
+  justify-content: center;
 }
 
 /* visited link */
@@ -65,9 +75,9 @@ li {
   color:black;
   text-decoration: none;
   list-style-type: none;
-  margin: 10px;
+  margin: 30px;
   padding: 2px;
-  display: inline;
+  display: inline-block;
   font-family:'Poppins', sans-serif;
   font-size: 24px;
   border: 2px solid black;
@@ -75,6 +85,13 @@ li {
   justify-content: center;
 }
 
+ul {
+  justify-content: center;
+  align-content: center;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
 
 
 form {
@@ -89,15 +106,15 @@ form {
   text-align: center;
 }
 
-/* footer {
+footer {
   height: 70px;
-  width: 1060px;
+  width: 100%;
   position:fixed;
-  align-self: center;
-  bottom:0;
-  background-color: cornsilk;
+  align-self:flex-end;
+  bottom:-50px;
+  background-image: url("fruit.jpg");
   font-size: 10px;
-  } */
+  }
 
 
 input {
@@ -131,6 +148,7 @@ input {
 
 .section {
   background-color: rgba(255,255,255, .8);
+  height: 1600px;
   display: flex;
   flex-wrap: wrap;
   flex-direction:column;
@@ -272,6 +290,7 @@ img {
   -moz-animation: fadeIn ease 5s;
   -o-animation: fadeIn ease 5s;
   -ms-animation: fadeIn ease 5s;
+  background-color: rgba(255,255,255, .8);
 }
 
 

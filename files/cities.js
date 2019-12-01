@@ -1,6 +1,9 @@
 const zomatoUrl = "https://developers.zomato.com/api";
 const api_key = '33d1c480bf5d69f93836c31489daab92';
 
+let newApi = `https://developers.zomato.com/api/v2.1/locations?query=`
+let newApi2 = `&apikey=33d1c480bf5d69f93836c31489daab92`
+
 window.onload = function (event) {
 
   const input = document.querySelector('input')
@@ -15,10 +18,14 @@ window.onload = function (event) {
 
   button.addEventListener('click', async function (event) {
     event.preventDefault()
+    
+    const newInput = input.value;
+    let result22 = await axios.get(`${newApi}${newInput}${newApi2}`)
+    console.log(result22);
+    let result33 = result22.data.location_suggestions[0].entity_id
 
-
-    let results = await axios.get(`https://developers.zomato.com/api/v2.1/cities?q=Williamsburg`, {
-      headers: { "user-key": "33d1c480bf5d69f93836c31489daab92" },
+    let results = await axios.get(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${result33}&entity_type=city`, {
+      headers: {"user-key": "33d1c480bf5d69f93836c31489daab92"}, 
       method: 'GET'
     })
 
@@ -64,3 +71,6 @@ window.onload = function (event) {
     section.appendChild(restingDiv)
   }
 }
+
+
+

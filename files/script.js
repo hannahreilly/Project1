@@ -3,6 +3,7 @@ const api_key = '33d1c480bf5d69f93836c31489daab92';
 
 let newApi = `https://developers.zomato.com/api/v2.1/locations?query=`
 let newApi2 = `&apikey=33d1c480bf5d69f93836c31489daab92`
+
 window.onload = function (event) {
   const body = document.body;
 
@@ -20,7 +21,7 @@ window.onload = function (event) {
   button.addEventListener('click', async function (event) {
     event.preventDefault()
 
-    
+
     const newInput = input.value;
     let result22 = await axios.get(`${newApi}${newInput}${newApi2}`)
     // console.log(result22);
@@ -32,7 +33,7 @@ window.onload = function (event) {
 
 
     let results = await axios.get(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${result33}&entity_type=city`, {
-      headers: {"user-key": "33d1c480bf5d69f93836c31489daab92"}, 
+      headers: { "user-key": "33d1c480bf5d69f93836c31489daab92" },
       method: 'GET'
     })
 
@@ -58,6 +59,8 @@ window.onload = function (event) {
       let element2 = forlooped[i].restaurant.phone_numbers
       let image1 = forlooped[i].restaurant.featured_image
       let restAddress = forlooped[i].restaurant.location.address
+      let restEstablishment = forlooped[i].restaurant.cuisines
+      // let restLink = forlooped[i].restaurant.url
 
       // let element3 = forlooped[i]
       console.log(element1)
@@ -70,6 +73,10 @@ window.onload = function (event) {
 
       restingDiv.appendChild(restName)
 
+      let establishment = document.createElement('h4')
+      establishment.innerHTML = `${restEstablishment}`
+      restingDiv.appendChild(establishment)
+
       let phone = document.createElement('h4')
       phone.innerHTML = `${element2}`
       phone.classList.add("results")
@@ -80,10 +87,15 @@ window.onload = function (event) {
       address.innerHTML = `${restAddress}`
       restingDiv.appendChild(address)
 
+      // let link = document.createElement('a')
+      // link.innerHTML = `${restLink}`
+      // restingDiv.appendChild(link)
+
       let image2 = document.createElement('img')
       image2.src = image1
       restingDiv.appendChild(image2)
       image2.classList.add("imageClass")
+
 
       // section.appendChild(imgNode)
       section.appendChild(restingDiv)
@@ -91,27 +103,27 @@ window.onload = function (event) {
   }
   // renderResults()
 
-//image slider//
-  
-var slideIndex = 0;
-showSlides();
+  //image slider//
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += "active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace("active","");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += "active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
 
 }
 
